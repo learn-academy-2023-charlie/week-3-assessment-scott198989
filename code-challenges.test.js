@@ -35,7 +35,7 @@ const { log } = require("console")
 // The test failed at the correct spot, the expect, because the function was not yet written.  
 // describe('fibFunc', () => { // The function is being declaired as fibFunc
 //   it('returns an array of Fibonacci sequence with length 6', () => { // This is the input of the function
-//     const expected = [0, 1, 1, 2, 3, 5]; // An array of the expected output
+//     const expectxed = [0, 1, 1, 2, 3, 5]; // An array of the expected output
 //     expect(fibFunc(6)).toEqual(expected);
 //   })
 
@@ -150,10 +150,9 @@ const studyMinutesWeek1 = { // the given data
   friday: 15,
   saturday: 60
 }
-// const studyLog = (time) => {// declare a function called studyLog and assign a parameter of `time`.
-//   return Object.values(time).sort((a, b) => a - b)// Using the information provided from the URL I learned that the Object.values is essentially a short handed way to iterate over an object with out having to write out a entire for loop. We reference the object (studyMinutesWeek1), and access the values (the numbers), and use the .sort method to sort from largest to greatest.  
-// }
-console.log(studyLog(studyMinutesWeek1))
+
+// Using the information provided from the URL I learned that the Object.values is essentially a short handed way to iterate over an object with out having to write out a entire for loop. We reference the object (studyMinutesWeek1), and access the values (the numbers), and use the .sort method to sort from largest to greatest.}
+// console.log(studyLog(studyMinutesWeek1))
 // Expected output: [15, 15, 20, 30, 30, 60, 90]
 
 // See the test pass
@@ -161,51 +160,118 @@ console.log(studyLog(studyMinutesWeek1))
 // studyLog
 //   ✓ a function that takes in a object (1 ms)
 
+//Psuedocode: I repeated the same process as above, only changed the name of the function and the output in the Jest Test statement. 
 
-//Repeated the same process as above
 
 // Create a test in jest to produce Good Failure
 // FAIL  ./code-challenges.test.js
 // studyLog2
   // ✕ a function that takes in a object (1 ms)
-/ describe('studyLog2', () => {
-  it(`a function that takes in a object`, () => { 
-  expect(`array of values sorted from least to greatest`).toEqual[10, 15, 20, 45, 60, 65, 100];
-      });
-    });
+  // this test failed because the function was not created below
+  // / describe('studyLog2', () => {//declare a function called studyLog and assign a parameter of `time`.
+  //   it(`a function that takes in a object`, () => {// describing the action my function will complete. 
+  //   expect(`array of values sorted from least to greatest`).toEqual[10, 15, 20, 45, 60, 65, 100];// the expected output 
+//   //       });
+//   //     });
 
-const studyMinutesWeek2 = {
-  sunday: 100,
-  monday: 10,
-  tuesday: 45,
-  wednesday: 60,
-  thursday: 20,
-  friday: 15,
-  saturday: 65
-}
-// Expected output: [10, 15, 20, 45, 60, 65, 100]
-// PASS  ./code-challenges.test.js
-// studyLog2
-//   ✓ a function that takes in a object (1 ms)
+// const studyMinutesWeek2 = {
+//   sunday: 100,
+//   monday: 10,
+//   tuesday: 45,
+//   wednesday: 60,
+//   thursday: 20,
+//   friday: 15,
+//   saturday: 65
+// }
+// // Expected output: [10, 15, 20, 45, 60, 65, 100]
+// // PASS  ./code-challenges.test.js
+// // studyLog2
+// //   ✓ a function that takes in a object (1 ms)
 
 
-const studyLog2 = (time) => {
-  return Object.values(time).sort((a,b) => a-b)
-}
-console.log(studyLog2(studyMinutesWeek2));
+// const studyLog2 = (time) => {
+//   return Object.values(time).sort((a,b) => a-b)
+// }
+// console.log(studyLog2(studyMinutesWeek2));
 // b) Create the function that makes the test pass.
 
 // --------------------3) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
+// Psuedocode:
+// input : a function that takes in a array
+// output ; return an array of the accumilatied sum.  Empty arrays will return empty arrays.
+// process: will be described line by line 
 
 // a) Create a test with expect statements for each of the variables provided.
+// Create a jest test to produce Good Failure.
+
+// FAIL  ./code-challenges.test.js
+// acct1
+//   ✕ takes in an array and returns an array of the accumulating sum (1 ms)
+
+// describe('acct1', () => { 
+//   it(`takes in an array and returns an array of the accumulating sum`, () => { 
+//       expect(acct1([100, -17, -23, -9])).toEqual([100, 83, 60, 50])
+//     })
+// })
+
+  
 
 const accountTransactions1 = [100, -17, -23, -9]
 // Expected output: [100, 83, 60, 51]
+const acct1 = [accountTransactions1[0]]// declared a function named acct1.  Initialize the given array at the first element index
+for (let i = 1; i < accountTransactions1.length; i++) {// iterate over each each element with a for loop.  Started with letting i = 0, and returned NaN.  Adjusted i = 1 and returned correct output.
+  acct1.push(acct1[i - 1] + accountTransactions1[i]);// after iteration, use the .push method adds the sum of acct1 and accountTransactions1 to acct1. the [i-1] will accesses the previous element in the previous array. The [i] accesses the current element in that array.
+  // acct1[i - 1] + accountTransactions1[i] as a whole will add the previous element to the current element. 
+}
+
+// console.log(acct1); //used to check
+// Psuedocode: Repeated the same process as above, only changed the function name.
+
+// Create a test in jest to produce Good Failure
+// FAIL  ./code-challenges.test.js
+// acct2
+//   ✕ takes in an array and returns an array of the accumulating sum
+
+// ● acct2 › takes in an array and returns an array of the accumulating sum
+
+//   ReferenceError: acct2 is not defined
+// Psuedocode:
+// input : take in an array
+// output : return an array with the sum of the accumilated numbers
+// Process : line by line below
+// describe('acct2', () => { 
+//   it(`takes in an array and returns an array of the accumulating sum`, () => { 
+//       expect(acct2([250, -89, 100, -96])).toEqual([250, 161, 261, 165])
+//     })
+// })
 
 const accountTransactions2 = [250, -89, 100, -96]
 // Expected output: [250, 161, 261, 165]
 
+const acct2 = (accountTransactions2) => {// declared a function named acct2, used the given array as a parameter.
+  let runningTotal = [accountTransactions2[0]]// created a new variable to hold the pushed values later on 
+  for (let i = 1; i < accountTransactions2.length; i++) {// for loop to iterate over the entire length of the given array
+    runningTotal.push(runningTotal[i - 1] + accountTransactions2[i])// after iteration, use the .push method adds the sum of acct2 and accountTransactions1 to acct2. the [i-1] will accesses the previous element in the previous array. The [i] accesses the current element in that array.
+    // acct2i - 1] + accountTransactions1[i] as a whole will add the previous element to the current element. 
+  }
+  return runningTotal;
+}
+
+
+// console.log(acct2) used to check output 
+
+// Psuedocode:
+// Input : take in a empty array
+// Output : a empty array
+// Process: This one is simple.  I will exlain here, I delcared a function called arrayChecker, used the parameter of array, and set up a conditional statement to check the length of the accountTransactions3 array.  If it was nothing, then return nothing.  
+
 const accountTransactions3 = []
+const arrayChecker = (array) => {
+  if (accountTransactions3.length === 0) {
+  }
+    return []
+}
+// console.log(arrayChecker([])) used to check output 
 // Expected output: []
 
 // b) Create the function that makes the test pass.
