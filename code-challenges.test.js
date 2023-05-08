@@ -39,16 +39,16 @@ const { log } = require("console")
 //     expect(fibFunc(6)).toEqual(expected);
 //   })
 
-//   it('returns null for input less than or equal to 2', () => { // This is the conditional portion of the fibFunc.  Since I do not want a number less than 2, I used null to return absolute nothing.  
-//     expect(fibFunc(1)).toBeNull(); // verifies that if the input is 1, the output will be null
-//     expect(fibFunc(2)).toBeNull(); // verifies that if the input is 2, the output will be null
-//   })
+  it('returns null for input less than or equal to 2', () => { // This is the conditional portion of the fibFunc.  Since I do not want a number less than 2, I used null to return absolute nothing.  
+    expect(fibFunc(1)).toBeNull(); // verifies that if the input is 1, the output will be null
+    expect(fibFunc(2)).toBeNull(); // verifies that if the input is 2, the output will be null
+  })
 
-//   it('returns the correct sequence for an input greater than 2', () => {// this is the expected output statement 
-//     const expected = [0, 1, 1, 2, 3, 5, 8, 13]; // created a array just for this test, it looks cleaner.
-//     expect(fibFunc(8)).toEqual(expected);
-//   })
-// })
+  it('returns the correct sequence for an input greater than 2', () => {// this is the expected output statement 
+    const expected = [0, 1, 1, 2, 3, 5, 8, 13]; // created a array just for this test, it looks cleaner.
+    expect(fibFunc(8)).toEqual(expected);
+  })
+})
 
 const fibLength1 = 6
 const fibFunc = (number) => {// The name of my function with the parameter of number.
@@ -76,6 +76,11 @@ for (let i = 2; i < number; i++) { // Setting up a for loop here.  I researched 
 //   ✓ returns null for input less than or equal to 2
 //   ✓ returns the correct sequence for an input greater than 2
 
+
+
+
+
+
 // Repeated the above
 
 // Create a test that sees Good failure
@@ -83,21 +88,21 @@ for (let i = 2; i < number; i++) { // Setting up a for loop here.  I researched 
 // fibFunc2
 // The test failed at the correct spot, the expect, because the function was not yet written.  
 // describe('fibFunc2', () => { // The function is being declaired as fibFunc
-//   it('returns an array of fibonacci sequence with length 10', () => { // This is the input of the function
-//     const expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // An array of the expected output
-//     expect(fibFunc2(10)).toEqual(expected);
-//   })
+  it('returns an array of fibonacci sequence with length 10', () => { // This is the input of the function
+    const expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // An array of the expected output
+    expect(fibFunc2(10)).toEqual(expected);
+  })
 
-//   it('returns null for input less than or equal to 2', () => { // This is the conditional portion of the fibFunc.  Since I do not want a number less than 2, I used null to return absolute nothing.  
-//     expect(fibFunc2(1)).toBeNull(); // verifies that if the input is 1, the output will be null
-//     expect(fibFunc2(2)).toBeNull(); // verifies that if the input is 2, the output will be null
-//   })
+  it('returns null for input less than or equal to 2', () => { // This is the conditional portion of the fibFunc.  Since I do not want a number less than 2, I used null to return absolute nothing.  
+    expect(fibFunc2(1)).toBeNull(); // verifies that if the input is 1, the output will be null
+    expect(fibFunc2(2)).toBeNull(); // verifies that if the input is 2, the output will be null
+  })
 
-//   it('returns the correct sequence for an input greater than 2', () => {// this is the expected output statement 
-//     const expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // created a array just for this test, it looks cleaner.
-//     expect(fibFunc2(10)).toEqual(expected);
-//   })
-// })
+  it('returns the correct sequence for an input greater than 2', () => {// this is the expected output statement 
+    const expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // created a array just for this test, it looks cleaner.
+    expect(fibFunc2(10)).toEqual(expected);
+  })
+})
 const fibFunc2 = (number) => {// The name of my function with the parameter of number.
   if (number <= 2) {// If the inputed number is less than or equal to 2 statement is the boolean value true, return nothing (null).  
     return null
@@ -119,6 +124,11 @@ for (let i = 2; i < number; i++) { // Setting up a for loop here.  I researched 
 //   ✓ returns null for input less than or equal to 2
 //   ✓ returns the correct sequence for an input greater than 2 (1 ms)
 // Expected output: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+
+
+
+
 
 
 
@@ -168,32 +178,37 @@ const studyMinutesWeek1 = { // the given data
 // studyLog2
   // ✕ a function that takes in a object (1 ms)
   // this test failed because the function was not created below
-  // / describe('studyLog2', () => {//declare a function called studyLog and assign a parameter of `time`.
-  //   it(`a function that takes in a object`, () => {// describing the action my function will complete. 
-  //   expect(`array of values sorted from least to greatest`).toEqual[10, 15, 20, 45, 60, 65, 100];// the expected output 
-//   //       });
-//   //     });
+  / describe('studyLog2', () => {//declare a function called studyLog and assign a parameter of `time`.
+    it(`a function that takes in a object`, () => {// describing the action my function will complete. 
+    expect(`array of values sorted from least to greatest`).toEqual[10, 15, 20, 45, 60, 65, 100];// the expected output 
+        });
+      });
 
-// const studyMinutesWeek2 = {
-//   sunday: 100,
-//   monday: 10,
-//   tuesday: 45,
-//   wednesday: 60,
-//   thursday: 20,
-//   friday: 15,
-//   saturday: 65
-// }
-// // Expected output: [10, 15, 20, 45, 60, 65, 100]
-// // PASS  ./code-challenges.test.js
-// // studyLog2
-// //   ✓ a function that takes in a object (1 ms)
+const studyMinutesWeek2 = {
+  sunday: 100,
+  monday: 10,
+  tuesday: 45,
+  wednesday: 60,
+  thursday: 20,
+  friday: 15,
+  saturday: 65
+}
+// Expected output: [10, 15, 20, 45, 60, 65, 100]
+// PASS  ./code-challenges.test.js
+// studyLog2
+//   ✓ a function that takes in a object (1 ms)
 
 
-// const studyLog2 = (time) => {
-//   return Object.values(time).sort((a,b) => a-b)
-// }
+const studyLog2 = (time) => {
+  return Object.values(time).sort((a,b) => a-b)
+}
 // console.log(studyLog2(studyMinutesWeek2));
 // b) Create the function that makes the test pass.
+
+
+
+
+
 
 // --------------------3) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 // Psuedocode:
@@ -208,13 +223,11 @@ const studyMinutesWeek1 = { // the given data
 // acct1
 //   ✕ takes in an array and returns an array of the accumulating sum (1 ms)
 
-// describe('acct1', () => { 
-//   it(`takes in an array and returns an array of the accumulating sum`, () => { 
-//       expect(acct1([100, -17, -23, -9])).toEqual([100, 83, 60, 50])
-//     })
-// })
-
-  
+describe('acct1', () => { 
+  it(`takes in an array and returns an array of the accumulating sum`, () => { 
+      expect(acct1([100, -17, -23, -9])).toEqual([100, 83, 60, 50])
+    })
+})
 
 const accountTransactions1 = [100, -17, -23, -9]
 // Expected output: [100, 83, 60, 51]
@@ -225,6 +238,11 @@ for (let i = 1; i < accountTransactions1.length; i++) {// iterate over each each
 }
 
 // console.log(acct1); //used to check
+
+
+
+
+
 // Psuedocode: Repeated the same process as above, only changed the function name.
 
 // Create a test in jest to produce Good Failure
@@ -239,11 +257,11 @@ for (let i = 1; i < accountTransactions1.length; i++) {// iterate over each each
 // input : take in an array
 // output : return an array with the sum of the accumilated numbers
 // Process : line by line below
-// describe('acct2', () => { 
-//   it(`takes in an array and returns an array of the accumulating sum`, () => { 
-//       expect(acct2([250, -89, 100, -96])).toEqual([250, 161, 261, 165])
-//     })
-// })
+describe('acct2', () => { 
+  it(`takes in an array and returns an array of the accumulating sum`, () => { 
+      expect(acct2([250, -89, 100, -96])).toEqual([250, 161, 261, 165])
+    })
+})
 
 const accountTransactions2 = [250, -89, 100, -96]
 // Expected output: [250, 161, 261, 165]
@@ -263,15 +281,32 @@ const acct2 = (accountTransactions2) => {// declared a function named acct2, use
 // Psuedocode:
 // Input : take in a empty array
 // Output : a empty array
-// Process: This one is simple.  I will exlain here, I delcared a function called arrayChecker, used the parameter of array, and set up a conditional statement to check the length of the accountTransactions3 array.  If it was nothing, then return nothing.  
+// Process: This one is simple.  I will exlain here, I delcared a function called acct3, used the parameter of array, and set up a conditional statement to check the length of the accountTransactions3 array.  If it was nothing, then return nothing.  
+
+// Create a test in Jest to produce Good Failure
+// FAIL  ./code-challenges.test.js
+// acct3
+//   ✕ takes in an empty array (1 ms)
+
+// ● acct3 › takes in an empty array
+
+//   ReferenceError: acct3 is not defined
+describe('acct3', () => { 
+  it(`takes in an empty array`, () => { 
+      expect(acct3([])).toEqual([])
+    })
+})
 
 const accountTransactions3 = []
-const arrayChecker = (array) => {
+const acct3 = (array) => {
   if (accountTransactions3.length === 0) {
   }
     return []
 }
-// console.log(arrayChecker([])) used to check output 
+// console.log(acct3([])) used to check output 
 // Expected output: []
 
 // b) Create the function that makes the test pass.
+// PASS  ./code-challenges.test.js
+// acct3
+//   ✓ takes in an empty array (1 ms)
