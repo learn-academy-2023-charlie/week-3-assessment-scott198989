@@ -48,7 +48,7 @@ const { log } = require("console")
     const expected = [0, 1, 1, 2, 3, 5, 8, 13]; // created a array just for this test, it looks cleaner.
     expect(fibFunc(8)).toEqual(expected);
   })
-})
+
 
 const fibLength1 = 6
 const fibFunc = (number) => {// The name of my function with the parameter of number.
@@ -102,7 +102,7 @@ for (let i = 2; i < number; i++) { // Setting up a for loop here.  I researched 
     const expected = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // created a array just for this test, it looks cleaner.
     expect(fibFunc2(10)).toEqual(expected);
   })
-})
+
 const fibFunc2 = (number) => {// The name of my function with the parameter of number.
   if (number <= 2) {// If the inputed number is less than or equal to 2 statement is the boolean value true, return nothing (null).  
     return null
